@@ -11,3 +11,33 @@
    background-color: black;
    color: white;
 }
+
+#about-me {
+    position: absolute;
+    
+    left: 45%;
+}
+
+#about-me img {
+    border-radius: 50%;
+}
+
+#sidebar {
+    position: fixed;
+    height: 100%;
+    width: 15%;
+}
+
+#sidebar li {
+    font-size: 20pt;
+    padding:0.7pt;
+}
+
+#sidebar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    color:darkorchid
+}
