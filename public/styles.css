@@ -6,6 +6,10 @@ body {
     height: 100vh;
 }
 
+p {
+    font-size: 24px;
+}
+
 .light-mode {
     background-color: #eeeeee;
     color: black;
@@ -28,14 +32,12 @@ body {
 }
 
 .whoami-fade {
-    position:relative;
     opacity: 0;
     transition: opacity 2s ease-in-out;
     pointer-events: none;
 }
 
 .whoami-fade.visible {
-    position:relative;
     opacity: 1;
     pointer-events: auto;
 }
@@ -93,6 +95,7 @@ body {
     text-align: center;
     align-content: center;
     display: block;
+    padding: 1rem;
 }
 
 #whoami img {
@@ -106,18 +109,15 @@ body {
 }
 
 #whoami-fade-one {
-    margin: 0;
-    padding: 0;
+    margin-top: 0px;
 }
 
 #whoami-fade-two {
-
-    margin-top: -23.5%;
+    margin-top: -405px;
 }
 
 #whoami-fade-three {
-
-    margin-top: -23.5%;
+    margin-top: -405px;
 }
 
 @keyframes fadeInOut {

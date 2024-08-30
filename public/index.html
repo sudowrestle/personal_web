@@ -11,6 +11,7 @@
 
 <body class="dark-mode">
 
+    <!-- Sidebar begin -->
     <div id="sidebar">
         <img src="../assets/rotatingtorus.gif" height="200" width="200">
         <ul class="sidebar-parent">
@@ -19,7 +20,9 @@
             </a>
             <li id="sidebar-header-projects">Projects</li>
             <ul class="sidebar-sub-projects">
-
+                <li>Project 1</li>
+                <li>Project 2</li>
+                <li>Project 3</li>
             </ul>
             <li>Socials & Links</li>
             <ul class="sidebar-child">
@@ -34,7 +37,7 @@
                 </a>
             </ul>
             <li id="sidebar-parent">Fun/Experimental</li>
-            <ul id="sidebar-child">
+            <ul class="sidebar-child">
                 <li>DOS Games</li>
                 <li>Gameboy Games</li>
             </ul>
@@ -44,26 +47,33 @@
             <button id="dark-mode-button" onclick="darkModeFunc()">Dark Mode Toggle</button>
         </div>
     </div>
+    <!-- sidebar end -->
 
+    <!-- content begin -->
     <div id="content">
+
+        <!-- about me begin -->
         <div class="section" id="about-me">
             <div id="whoami">     
-                <h1>Hello, nice to meet you.</h1>         
+                <h1>Welcome</h1>         
                 <div class="whoami-fade" id="whoami-fade-one">   
                     <img src="../assets/aboutme.jpg" width="310" height="310" alt="Me" />
-                    <h1 id="whoami-header">I'm <em>Anthony Elia</em></h1>
+                    <h1 id="whoami-header">I'm <a href="#" style="color: #1dda91;"><em>Anthony Elia</em></a></h1>
                 </div>
                 <div class="whoami-fade" id="whoami-fade-two">
                     <img src="../assets/GithubAvi.jpg" width="310" height="310" alt="Me" />
-                    <h1 id="whoami-header">...and <em>WatchMeCompile</em> on Github</h1>
+                    <h1 id="whoami-header">also known as <a href="#" style="color: #3b81dd;"><em>WatchMeCompile</em></a> on Github</h1>
                 </div>
                 <div class="whoami-fade" id="whoami-fade-three">
                     <img src="../assets/LeetCodeAvi.jpg" width="310" height="310" alt="Me" />
-                    <h1 id="whoami-header">...and <em>AnnieWannie</em> on LeetCode</h1>
+                    <h1 id="whoami-header">...and <a href="https://leetcode.com/u/AnnieWannie/" style="color: #cec21a;"><em>AnnieWannie</em> </a> on LeetCode</h1>
                 </div>
+                <p>This is my personal website that I have created to have fun and try to do some neat things with HTML, CSS, and JavaScript</p>
             </div>
         </div>
-
+        <!-- about me end-->
+    
+        <!-- projects begin -->
         <div class="section" id="projects">
             <div id="project-1">
                 <h1>Lorem ipsum 1</h1>
@@ -72,6 +82,9 @@
                 <h1>Lorem ipsum 2</h1>
             </div>
         </div>
+        <!-- projects end -->
+
+    <!-- content end -->
     </div>
     
 
