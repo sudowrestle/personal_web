@@ -32,6 +32,14 @@ p {
     text-align: center;
 }
 
+.section-header {
+    text-align: left;
+    margin-left: 2em;
+    padding: 0.3em;
+    box-shadow: 2px 10px 2px 2px orchid;
+    width: fit-content;
+}
+
 .whoami-fade {
     opacity: 0;
     transition: opacity 2s ease-in-out;
@@ -52,7 +60,6 @@ p {
     left: 15%;
     width: 85%;
     height: 100%;
-    padding-left: 0.5%;
 }
 
 #dark-mode-button-container {
