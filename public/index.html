@@ -1,36 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    </head>
-    <body class="dark-mode">
 
-            <div id="about-me">
-                <h1>Hello, I'm Anthony Elia</h1>
-                <img src="../assets/aboutme.jpg" width="310" height="310" alt="Me"/>
-                <h1>aka</h1>
-                <h1>WatchMeCompile on Github</h1>
-            </div>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="../scripts/indexScript.js"></script>
+</head>
 
-            <div id="sidebar">
-                <img src="../assets/rotatingtorus.gif" height="200" width="200">
-                <ul>
-                    <a href="#about-me"><li>About Me</li></a>
-                    <li>Projects</li>
-                    <li>Socials & Links</li>
-                        <ul class="sub-list">
-                            <a href="https://github.com/WatchMeCompile"><li>Github</li></a>
-                            <a href="https://www.linkedin.com/in/anthelia/"><li>LinkedIn</li></a>
-                            <a href="https://leetcode.com/u/AnnieWannie/"><li>LeetCode</li></a>                      
-                        </ul>
-                    <li>Fun/Experimental</li>
-                    <li>Contact Me</li>
-                </ul>
+<body class="dark-mode">
+
+    <div id="sidebar">
+        <img src="../assets/rotatingtorus.gif" height="200" width="200">
+        <ul class="sidebar-parent">
+            <a href="#about-me">
+                <li id="sidebar-header-aboutme">About Me</li>
+            </a>
+            <li id="sidebar-header-projects">Projects</li>
+            <ul class="sidebar-sub-projects">
+
+            </ul>
+            <li>Socials & Links</li>
+            <ul class="sidebar-child">
+                <a href="https://github.com/WatchMeCompile">
+                    <li>Github</li>
+                </a>
+                <a href="https://www.linkedin.com/in/anthelia/">
+                    <li>LinkedIn</li>
+                </a>
+                <a href="https://leetcode.com/u/AnnieWannie/">
+                    <li>LeetCode</li>
+                </a>
+            </ul>
+            <li id="sidebar-parent">Fun/Experimental</li>
+            <ul id="sidebar-child">
+                <li>DOS Games</li>
+                <li>Gameboy Games</li>
+            </ul>
+            <li id="sidebar-parent">Contact Me</li>
+        </ul>
+        <div id="dark-mode-button-container">
+            <button id="dark-mode-button" onclick="darkModeFunc()">Dark Mode Toggle</button>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="section" id="about-me">
+            <div id="whoami">     
+                <h1>Hello, nice to meet you.</h1>         
+                <div class="whoami-fade" id="whoami-fade-one">   
+                    <img src="../assets/aboutme.jpg" width="310" height="310" alt="Me" />
+                    <h1 id="whoami-header">I'm <em>Anthony Elia</em></h1>
+                </div>
+                <div class="whoami-fade" id="whoami-fade-two">
+                    <img src="../assets/GithubAvi.jpg" width="310" height="310" alt="Me" />
+                    <h1 id="whoami-header">...and <em>WatchMeCompile</em> on Github</h1>
+                </div>
+                <div class="whoami-fade" id="whoami-fade-three">
+                    <img src="../assets/LeetCodeAvi.jpg" width="310" height="310" alt="Me" />
+                    <h1 id="whoami-header">...and <em>AnnieWannie</em> on LeetCode</h1>
+                </div>
             </div>
-                
-            <img height="10000000px">
-    </body>
+        </div>
+
+        <div class="section" id="projects">
+            <div id="project-1">
+                <h1>Lorem ipsum 1</h1>
+            </div>
+            <div id="project-2">
+                <h1>Lorem ipsum 2</h1>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
 </html>

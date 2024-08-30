@@ -2,35 +2,75 @@
     font-family:"Quicksand", sans-serif
 }
 
+body {
+    height: 100vh;
+}
+
 .light-mode {
-    background-color: white;
-    color: black
+    background-color: #eeeeee;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 
 .dark-mode {
-   background-color: black;
+   background-color: #222;
    color: white;
+   margin: 0;
+   padding: 0;
 }
 
-#about-me {
-    position: absolute;
-    
-    left: 45%;
+.section {
+    position: relative;   
+    align-content: center;
+    border-bottom: thin 3pt #ff1010;
+    box-shadow: 0 3px 10px -5px #ff1010;
 }
 
-#about-me img {
-    border-radius: 50%;
+.whoami-fade {
+    position:relative;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    pointer-events: none;
+}
+
+.whoami-fade.visible {
+    position:relative;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#content{
+    position: relative;
+    left: 15%;
+    width: 85%;
+    height: 100%;
+}
+
+#dark-mode-button-container {
+    position: relative;
+    display:flex;
+    left: 1%;
+    bottom: 1%;
+    justify-content: center;
 }
 
 #sidebar {
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 15%;
+    border-right: 1pt solid;
+    box-shadow: 0 3px 14px #eeeeee;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0.7rem;
 }
 
 #sidebar li {
     font-size: 20pt;
-    padding:0.7pt;
+    padding-top: 0.7em;
 }
 
 #sidebar a {
@@ -39,5 +79,51 @@
 }
 
 #sidebar a:hover {
-    color:darkorchid
+    color:#9e5d90
+}
+
+#sidebar ul ul {
+    display: none;
+    padding-left: 35px;
+    font-size: 14pt;
+}
+
+#whoami {
+    overflow: hidden;
+    text-align: center;
+    align-content: center;
+    display: block;
+}
+
+#whoami img {
+    border-radius: 50%;
+    border: solid #9e5d90 5px
+}
+
+#whoami-header {
+    width: 100%;
+    font-size: 2em;
+}
+
+#whoami-fade-one {
+    margin: 0;
+    padding: 0;
+}
+
+#whoami-fade-two {
+
+    margin-top: -23.5%;
+}
+
+#whoami-fade-three {
+
+    margin-top: -23.5%;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
 }
