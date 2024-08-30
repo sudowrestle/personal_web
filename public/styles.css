@@ -29,17 +29,22 @@ p {
     align-content: center;
     border-bottom: thin 3pt #ff1010;
     box-shadow: 0 3px 10px -5px #ff1010;
+    text-align: center;
 }
 
 .whoami-fade {
     opacity: 0;
     transition: opacity 2s ease-in-out;
     pointer-events: none;
+    grid-row-start: 1;
+    grid-column-start:1;
 }
 
 .whoami-fade.visible {
     opacity: 1;
     pointer-events: auto;
+    grid-row-start: 1;
+    grid-column-start:1;
 }
 
 #content{
@@ -47,13 +52,13 @@ p {
     left: 15%;
     width: 85%;
     height: 100%;
+    padding-left: 0.5%;
 }
 
 #dark-mode-button-container {
-    position: relative;
-    display:flex;
-    left: 1%;
-    bottom: 1%;
+    position: fixed;
+    left: 91%;
+    bottom: 97%;
     justify-content: center;
 }
 
@@ -61,8 +66,9 @@ p {
     position: fixed;
     height: 100vh;
     width: 15%;
-    border-right: 1pt solid;
-    box-shadow: 0 3px 14px #eeeeee;
+    border-right: 1pt solid #c904fa ;
+    box-shadow: 0 3px 14px #c904fa;
+    overflow: auto;
 }
 
 #sidebar ul {
@@ -85,7 +91,6 @@ p {
 }
 
 #sidebar ul ul {
-    display: none;
     padding-left: 35px;
     font-size: 14pt;
 }
@@ -94,8 +99,9 @@ p {
     overflow: hidden;
     text-align: center;
     align-content: center;
-    display: block;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    
 }
 
 #whoami img {
@@ -108,22 +114,21 @@ p {
     font-size: 2em;
 }
 
-#whoami-fade-one {
-    margin-top: 0px;
-}
-
-#whoami-fade-two {
-    margin-top: -405px;
-}
-
-#whoami-fade-three {
-    margin-top: -405px;
-}
-
 @keyframes fadeInOut {
     0% { opacity: 0; }
     20% { opacity: 1; }
     40% { opacity: 1; }
     60% { opacity: 0; }
     100% { opacity: 0; }
+}
+
+@media only screen and (max-width: 1026px) {
+    #sidebar {
+        display: none
+    }
+    #content {
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
 }

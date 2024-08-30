@@ -18,17 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(rotateWhoami, 4 * 1000);
     rotateWhoami();
 
-    
-    const parentItems = document.querySelectorAll('.sidebar-parent');
-
-    parentItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const childList = this.querySelector('.sidebar-child');
-            if (childList) {
-                childList.style.display = (childList.style.display === 'block') ? 'none' : 'block';
-            }
-        });
-    });
 });
 
 function darkModeFunc(){
