@@ -134,8 +134,7 @@ p {
 }
 
 #whoami h2 {
-    grid-row-start: 0;
-    grid-column-start: 0;
+    
 }
 
 #whoami img {
@@ -188,6 +187,10 @@ p {
     width: 25%;
     bottom: 17.5%;
     font-size: 1.75em;
+}
+
+#resume a {
+    color: inherit;
 }
 
 /* rules */
