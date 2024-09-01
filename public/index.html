@@ -2,11 +2,24 @@
 <html lang="en">
 
 <head>
+    <!-- css styling -->
+    <link rel="stylesheet" href="../assets/css/dos.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Index Javascript -->
     <script src="../scripts/index.js"></script>
+
+    <!-- Favicon -->
+    <title>Planet Eanth</title>
+    <link rel="icon" href="../assets/icons/GithubAvi.ico">
+
+    <!-- JS dos -->
+    <script src="../scripts/js-dos.js"></script>
 </head>
 
 <body class="light-mode">
@@ -30,14 +43,20 @@
 
             <li class="sidebar-parent" id="sidebar-header-projects">Projects</li>
             <ul class="sidebar-sub-projects">
-                <a href="#project-1"><li>Project 1</li></a>
-                <a href="#project-2"><li>Project 2</li></a>
-                <a href="#project-3"><li>Project 3</li></a>
+                <a href="#project-1">
+                    <li>Project 1</li>
+                </a>
+                <a href="#project-2">
+                    <li>Project 2</li>
+                </a>
+                <a href="#project-3">
+                    <li>Project 3</li>
+                </a>
             </ul>
 
             <li class="sidebar-parent" id="sidebar-fun">Fun/Experimental</li>
             <ul class="sidebar-child">
-                <li>DOS Games</li>
+                <a href="#dos"><li>DOS Games</li></a>
             </ul>
 
             <li class="sidebar-parent">Socials & Links</li>
@@ -66,7 +85,7 @@
         <div class="section" id="about-me">
 
             <!-- whoami -->
-            <h2 class="section-header" style="top:25%;"><u>About Me</u><br />&emsp;&emsp; $ whoami</h2>           
+            <h2 class="section-header" style="top:25%;"><u>About Me</u><br />&emsp;&emsp; $ whoami</h2>
             <div class="section-card" id="whoami">
                 <div class="whoami-fade">
                     <h1 id="whoami-header">Welcome to my website!</h1>
@@ -78,7 +97,7 @@
                     <h1 id="whoami-header">Welcome to my website!</h1>
                     <img src="../assets/images/GithubAvi.jpg" width="450" height="450" alt="Me" />
                     <h1 id="whoami-header">also known as <a href="https://www.github.com/Eanth"
-                            style="color: #3b81dd;"><em>Eanth</em></a>
+                            style="color: #3b81dd;"><em>eanth</em></a>
                         on Github</h1>
                 </div>
                 <div class="whoami-fade">
@@ -115,7 +134,7 @@
                     professional,
                     so when you get bored of reading my resume and/or checking out my projects, if you still have a
                     minute, feel free
-                    to play some DOOM, Duke Nukem, or Quake.
+                    to play some free shareware/freeware DOS games in your browser such as DOOM, Tetris, Duke Nukem.
                     <br /> <br />
 
                     I hope you enjoy exploring it as much as I did making it <br /> <br />
@@ -127,7 +146,7 @@
                 </p>
             </div>
 
-            <!-- resume -->           
+            <!-- resume -->
             <div class="section-card" id="resume">
                 <h2 class="section-header"><u>About Me</u><br />&emsp;&emsp; Resume</h2>
                 <p>
@@ -140,28 +159,41 @@
                 <a href="../assets/misc/Elia_Resume.pdf" download><img src="../assets/Images/MyResume.png" height="950"
                         width="750" /></a>
             </div>
+        </div>
 
+        <!-- projects -->
+        <div class="section" id="projects">
+            <h2 class="section-header" id="projects">Projects</h2>
+            <div class="section-card project" id="project-1">
+                <h1>Nerdstrom</h1>
 
-
-            <!-- projects -->
-            <div class="section" id="projects">
-                <h2 class="section-header" id="projects">Projects</h2>
-                <div id="project-1">
-                    <h1>Lorem ipsum 1</h1>
-                </div>
-                <div id="project-2">
-                    <h1>Lorem ipsum 2</h1>
-                </div>
+                <img> </img>
             </div>
-            <!-- projects -->
-
-            <!-- content -->
+            <div class="section-card project" id="project-2">
+                <h1>Lorem ipsum 2</h1>
+            </div>
         </div>
 
-        <!-- darkmode -->
-        <div id="dark-mode-button-container">
-            <button id="dark-mode-button" onclick="darkModeFunc()">Dark Mode Toggle</button>
+        <!-- FUN -->
+        <div class="section" id="fun">
+            <h2 class="section-header" id="fun"><u>Fun</u><br />&emsp;&emsp; DOS Games</h2>
+            <div class="section-card" id="dos-card">
+                <style></style>
+                <div id="dos"></div>
+
+                <script>
+                    Dos(document.getElementById("dos"), {
+                        url: "https://cdn.dos.zone/original/2X/9/9ed7eb9c2c441f56656692ed4dc7ab28f58503ce.jsdos",
+                    });
+                </script>
+            </div>
         </div>
+    </div>
+
+    <!-- darkmode -->
+    <div id="dark-mode-button-container">
+        <button id="dark-mode-button" onclick="darkModeFunc()">Dark Mode Toggle</button>
+    </div>
 
 </body>
 
