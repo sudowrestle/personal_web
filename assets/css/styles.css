@@ -3,10 +3,16 @@
     margin: 0;
 }
 
+html {
+	font-family: sans-serif;
+	scroll-snap-type: y mandatory;
+}
+
 p {
     font-size: 1.45rem;
 }
 
+/* classes */
 .light-mode {
     background-color: #eeeeee;
     color: black;
@@ -32,13 +38,16 @@ p {
 .section-header {
     text-align: left;
     margin-left: 2em;
+    top: 25%;
     padding: 0.3em;
     box-shadow: 8px 8px 7px 2px #9b5098;
     width: fit-content;
+    align-self: left;
 }
 
 .section-card {
     height: 100vh;
+    scroll-snap-align: start;
 }
 
 .whoami-fade {
@@ -56,6 +65,8 @@ p {
     grid-column-start:1;
 }
 
+
+/* ids */
 #content{
     position: relative;
     left: 12.5%;
@@ -122,6 +133,11 @@ p {
     grid-template-columns: 1fr;
 }
 
+#whoami h2 {
+    grid-row-start: 0;
+    grid-column-start: 0;
+}
+
 #whoami img {
     border-radius: 50%;
     border: solid #9e5d90 7px;
@@ -129,13 +145,13 @@ p {
 
 #whoami-header {
     width: 100%;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-#whatisthis {
+#whatisthis p {
     margin-left: 25%;
     margin-right: 25%;
-    text-align: center;    
+    text-align: center;
 }
 
 #whatisthis p {
@@ -145,12 +161,36 @@ p {
 
 #whatisthis a {
     transition: font-size 0.2s;
+    font-weight: bold;
+    color: inherit;
+    
 }
 
 #whatisthis a:hover {
     font-size: 1.65rem;
 }
 
+
+#resume img {
+    position: relative;
+    display: inline-block;
+    left: 10%;
+    top: 15%;
+    height:auto;
+    width:100%;
+    max-height: 950px;
+    max-width: 750px;
+}
+
+#resume p {
+    position:relative;
+    display: inline-block;
+    width: 25%;
+    bottom: 17.5%;
+    font-size: 1.75em;
+}
+
+/* rules */
 @media only screen and (max-width: 1026px) {
     #sidebar {
         display: none
