@@ -5020,8 +5020,7 @@ html {
 }
 
 .jsdos-rso .window {
-    overflow: hidden;
-    display: block;
+    overflow: hidden
 }
 
 .jsdos-rso .window .background-image {
