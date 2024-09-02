@@ -56,7 +56,7 @@
 
             <li class="sidebar-parent" id="sidebar-fun">Fun/Experimental</li>
             <ul class="sidebar-child">
-                <a href="#dos"><li>DOS Games</li></a>
+                <a href="#dos-card"><li>DOS Games</li></a>
             </ul>
 
             <li class="sidebar-parent">Socials & Links</li>
@@ -134,7 +134,8 @@
                     professional,
                     so when you get bored of reading my resume and/or checking out my projects, if you still have a
                     minute, feel free
-                    to play some free shareware/freeware DOS games in your browser such as DOOM, Tetris, Duke Nukem.
+                    to play some free shareware/freeware <a href="#dos-card">DOS games</a> in your browser such as X-Men, Doom, Duke Nukem,
+                    and many more.
                     <br /> <br />
 
                     I hope you enjoy exploring it as much as I did making it <br /> <br />
@@ -176,18 +177,26 @@
 
         <!-- FUN -->
         <div class="section" id="fun">
-            <h2 class="section-header" id="fun"><u>Fun</u><br />&emsp;&emsp; DOS Games</h2>
+            <h2 class="section-header"><u>Fun</u><br />&emsp;&emsp; DOS Games</h2>
             <div class="section-card" id="dos-card">
-                <style></style>
                 <div id="dos"></div>
 
-                <script>
-                    Dos(document.getElementById("dos"), {
-                        url: "../assets/dosGames/xmen.jsdos",
-                    });
-                </script>
+                
+            </div>
+            <button onclick="gameBoot('XMEN')">X-Men Children of the Atom</button>
+            <button onclick="gameBoot('DOOM')">DOOM</button>
+        </div>
+
+        <!-- Socials & Links -->
+        <div class="section" id="socials">
+            <h2 class="section-header"><u>Socials & Links</u></h2>
+            <div class="section-card" id="socials-card">
+
+    
             </div>
         </div>
+
+
     </div>
 
     <!-- darkmode -->
