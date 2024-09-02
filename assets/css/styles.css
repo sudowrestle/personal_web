@@ -223,17 +223,88 @@ p {
 
 /* JS DOS STYLING */
 
-#dos #login {
-    display: none;
+.jsdos-rso .window {
+    overflow: hidden;
+}
+.bg-base-100 {
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+.flex {
+    display: flex
+}
+.justify-center {
+    justify-content: center;
+}
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+    width: 100%;
+}
+.absolute {
+    position: absolute;
+}
+
+.jsdos-rso .window .background-image {
+    pointer-events: none;
+    position: absolute;
+    left: 3rem;
+    right: 0;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.jsdos-rso canvas,
+.jsdos-rso .slider,
+.jsdos-rso .soft-keyboard {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+    -ms-content-zooming: none;
+    touch-action: none;
+    outline: none
+}
+
+.jsdos-rso .emulator-canvas,
+.jsdos-rso .emulator-video {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    touch-action: none
+}
+
+canvas {
+        display: block;
+        vertical-align: middle
+}
+
+#dos-container {
+    height: 25%;
+    width: 25%;
+    min-width: 25%;
+    position: absolute;
+    top: 23%;
+    left: 45%;
 }
 
 #dos {
-    height: 33%;
-    width: 33%;
-    position: relative;
-    top: 18%;
-    left: 42%;
-    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#dos #login {
+    display: none;
 }
 
 #dos .pre-run-window {

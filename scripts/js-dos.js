@@ -14674,14 +14674,14 @@ function zl(e) {
         s = Di(Dl, {})
     }
     return Di("div", {
-        class: "window absolute w-full h-full bg-base-100",
+        class: "window absolute w-full h-full bg-base-100 flex justify-center",
         children: [Di("div", {
             class: "background-image",
             style: {
                 backgroundImage: o ? "url(" + o + ")" : void 0
             }
         }), Di("div", {
-            class: "relative flex flex-row h-full w-full items-start justify-start overflow-auto",
+            class: "relative flex flex-row h-full w-full items-center justify-center overflow-auto",
             children: [!i && Di("div", {
                 class: (t ? n ? "w-24" : "w-96" : "w-12") + " flex-shrink-0"
             }), s]
