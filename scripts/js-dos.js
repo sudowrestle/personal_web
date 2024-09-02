@@ -4219,7 +4219,7 @@ const bi = "qwertyuiopasdfghjklzxcvbnm1234567890"
         mirroredControls: "true" === qo.getItem("mirroredControls"),
         scaleControls: Number.parseFloat(qo.getItem("scaleControls") ?? "0.2"),
         mouseSensitivity: Number.parseFloat(qo.getItem("mouse_sensitivity") ?? "1.0"),
-        mouseCapture: !1,
+        mouseCapture: 1,
         paused: !1,
         stats: {
             cyclesPerMs: 0,

@@ -6,7 +6,6 @@
 html {
 	font-family: sans-serif;
     font-size: 1rem;
-	scroll-snap-type: y mandatory;
 }
 
 p {
@@ -47,7 +46,6 @@ p {
 
 .section-card {
     height: 100vh;
-    scroll-snap-align: start;
 }
 
 .whoami-fade {
@@ -70,19 +68,7 @@ p {
 }
 
 
-/* ids */
-
-#available-games-container{
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    overflow: auto;
-    width: 20%;
-    gap: 1rem;
-    left: 5%;
-    bottom: 20%;
-    background: #eee;
-}
+/* misc. ids */
 
 #content{
     position: relative;
@@ -104,11 +90,9 @@ p {
     text-wrap: nowrap;
 }
 
-#dos-card {
-    background-image: url(../backgrounds/dosBackgroundFrame.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
+
+
+/* sidebar styling */
 
 #sidebar {
     position: fixed;
@@ -153,6 +137,8 @@ p {
     padding-top: 1em;
 }
 
+/* whoami section styles */
+
 #whoami {
     overflow: hidden;
     text-align: center;
@@ -170,6 +156,8 @@ p {
     width: 100%;
     font-size: 2.5em;
 }
+
+/* what is this section styles */
 
 #whatisthis p {
     margin-left: 25%;
@@ -194,6 +182,7 @@ p {
     transform: scale(1.1);
 }
 
+/* resume section styles */
 #resume-container {
     display: flex;
     flex-direction: row;
@@ -226,6 +215,27 @@ p {
     position: relative;
     bottom: 15%;
     flex: 1;
+}
+
+
+/* Dos games section styling */
+
+#dos-card {
+    background-image: url(../backgrounds/dosBackgroundFrame.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#available-games-container{
+    position: block;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 20%;
+    gap: 1rem;
+    left: 5%;
+    bottom: 20%;
+    background: #eee;
 }
 
 /* JS DOS STYLING */
@@ -301,7 +311,7 @@ canvas {
     min-width: 25%;
     position: absolute;
     top: 23%;
-    left: 45%;
+    left: 46%;
 }
 
 #dos {
