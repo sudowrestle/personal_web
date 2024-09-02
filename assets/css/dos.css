@@ -1,3 +1,4 @@
+#dos {
 *,
 :before,
 :after {
@@ -5001,6 +5002,7 @@ html {
 }
 
 .jsdos-rso .login-widget {
+    display: hidden;
     position: absolute;
     left: 3rem;
     top: 0;
@@ -6167,4 +6169,6 @@ html {
     .sm\:hidden {
         display: none
     }
+}
+
 }

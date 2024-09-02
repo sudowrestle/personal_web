@@ -4213,7 +4213,8 @@ const bi = "qwertyuiopasdfghjklzxcvbnm1234567890"
         backendHardware: "false" !== qo.getItem("backendHardware"),
         renderBackend: qo.getItem("renderBackend") ?? "webgl",
         renderAspect: qo.getItem("renderAspect") ?? "AsIs",
-        volume: Number.parseFloat(qo.getItem("volume") ?? "1.0"),
+        // set a much lower default volume original was too loud 
+        volume: Number.parseFloat(".3"),
         mobileControls: !1,
         mirroredControls: "true" === qo.getItem("mirroredControls"),
         scaleControls: Number.parseFloat(qo.getItem("scaleControls") ?? "0.2"),
@@ -8158,7 +8159,8 @@ async function is(e, t, n, r, o) {
     s(Ci.actions.bndLoad(e));
     const a = await t;
     s(ii.actions.ready());
-    const c = await n;
+    // swapped this off of async to skip waiting on saves to load
+    const c = n;
     s(Ci.actions.bndConfig());
     const l = await emulators.bundleConfig(a);
     s(ai.actions.init(l)),
@@ -14661,7 +14663,9 @@ function zl(e) {
         s = Di(Ml, {});
         break;
     case "prerun":
-        s = Di(Ys, {});
+        // Got rid of prerun jumps right into game with no built in UI
+        // s = Di(Ys, {});
+        s = Di(xl, {});
         break;
     case "run":
         s = Di(xl, {});
