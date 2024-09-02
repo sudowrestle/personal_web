@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(rotateWhoami, 4 * 1000);
     rotateWhoami();
-    
+
 });
 
 function darkModeFunc(){
@@ -32,6 +32,6 @@ function darkModeFunc(){
 function gameBoot(name){
 
     Dos(document.getElementById("dos"), {
-        url: "../assets/dosGames/" + name + ".jsdos",
+        url: "assets/dosGames/" + name + ".jsdos",
     });
 };
