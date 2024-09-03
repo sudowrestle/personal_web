@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(rotateWhoami, 4 * 1000);
     rotateWhoami();
 
-    gameBoot("DOOM");
+    gameBoot("WARCRAFT");
 
 });
 
