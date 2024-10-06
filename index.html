@@ -13,13 +13,12 @@
 
     <!-- Index Javascript -->
     <script src="scripts/index.js"></script>
+    <!-- JS dos -->
+    <script src="scripts/js-dos.js"></script>
 
     <!-- Favicon -->
     <title>Planet Eanth</title>
     <link rel="icon" href="assets/icons/GithubAvi.ico">
-
-    <!-- JS dos -->
-    <script src="scripts/js-dos.js"></script>
 </head>
 
 <body class="light-mode">
@@ -169,7 +168,6 @@
 
                     <i> <b>Sincerely,</b>
                         <br /><b>Anthony E.</b>
-                        <br /> ❤️
                     </i>
                 </p>
             </div>
@@ -187,7 +185,7 @@
                         (or alternatively <a href="assets/misc/Elia_Resume.pdf" download>here</a>)
                     </p>
                     <a href="assets/misc/Elia_Resume.pdf" download>
-                        <img src="assets/images/MyResume.png" height="950" width="750">
+                        <img src="assets/images/MyResume.png" height="950" width="750" />
                     </a>
                 </div>
             </div>
@@ -197,9 +195,14 @@
         <div class="section" id="projects">
             <h2 class="section-header" id="projects">Projects</h2>
             <div class="section-card" id="project-1">
+                <div class="project-card">
                 <h1>ServiceNowXMLDecoder</h1>
-
-                <img> </img>
+                    <img src="assets/images/project1image1.png" height="509" width="982" />
+                    <p>
+                        Parse and format ServiceNowXML offloads into a user friendly readable format while also decoding attachment data.
+                    </p>
+                
+                </div>
             </div>
             <div class="section-card" id="project-2">
                 <h1>Nerdstrom</h1>
@@ -224,6 +227,7 @@
     <!-- darkmode -->
     <div id="dark-mode-button-container">
         <button id="dark-mode-button" onclick="darkModeFunc()">Dark Mode Toggle</button>
+        <button id="pc-onoff-button" onclick="turnOffPC()">Turn off PC</button>
     </div>
 
 </body>

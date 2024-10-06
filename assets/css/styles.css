@@ -90,6 +90,10 @@ p {
     text-wrap: nowrap;
 }
 
+#pc-onoff-button {
+    text-wrap: nowrap;
+}
+
 
 
 /* sidebar styling */
@@ -313,6 +317,7 @@ p {
     position: absolute;
     top: 21%;
     left: 43%;
+    display: block;
 }
 
 #dos {

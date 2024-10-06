@@ -32,8 +32,23 @@ function darkModeFunc(){
 }
 
 function gameBoot(name){
-
     Dos(document.getElementById("dos"), {
         url: "assets/dosGames/" + name + ".jsdos",
     });
 };
+
+function turnOffPC(){
+    let dosPCState = document.getElementById("pc-onoff-button");
+    let dosPC = document.getElementById("dos");
+    
+    if (dosPCState.innerText == "Turn off PC") {
+        dosPCState.innerText = "Turn on PC";
+        dosPC.style.display = "none";
+        gameBoot("none");
+    } else if (dosPCState.innerText == "Turn on PC") {
+        dosPCState.innerText = "Turn off PC";
+        dosPC.style.display = "block";
+        gameBoot("DOOM");  
+    }
+    
+}
