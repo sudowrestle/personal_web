@@ -27,6 +27,12 @@ p {
    padding: 0;
 }
 
+.project-card {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12.5%;
+}
+
 .section {
     position: relative;   
     align-content: center;
@@ -46,6 +52,7 @@ p {
 
 .section-card {
     height: 100vh;
+    box-shadow: 0px 0px 6px 0px #a93939;
 }
 
 .whoami-fade {
@@ -336,6 +343,27 @@ p {
     height: 25%;
     left: 35%;
     color: #eee;
+}
+
+/* projects styling */
+
+.project-card img {
+    padding: 3%;
+    size: 75%;
+}
+
+.project-card p {
+    padding: 3%;
+    align-self: center;
+}
+
+.project-card a {
+    color: inherit;
+}
+
+.project-card a:hover {
+    display: inline-block;
+    transform: scale(1.1);
 }
 
 /* rules */
