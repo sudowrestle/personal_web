@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    let currDateNow = new Date().getFullYear();
+
     const whoamiDivElements = document.querySelectorAll('.whoami-fade');
     let current = 0;
+
 
     // adjust whoami display effects here
     function rotateWhoami() {
@@ -19,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     rotateWhoami();
 
     gameBoot("WARCRAFT");
+
+    document.querySelector("#footer h2").innerHTML="&#169 Anthony Elia " + currDateNow;
 
 });
 
@@ -43,8 +48,7 @@ function turnOffPC(){
     
     if (dosPCState.innerText == "Turn off PC") {
         dosPCState.innerText = "Turn on PC";
-        dosPC.style.display = "none";
-        gameBoot("none");
+        Dos(document.getElementById("dos")).stop();
     } else if (dosPCState.innerText == "Turn on PC") {
         dosPCState.innerText = "Turn off PC";
         dosPC.style.display = "block";

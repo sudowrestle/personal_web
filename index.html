@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- css styling -->
     <!-- <link rel="stylesheet" href="../assets/css/dos.css"> -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -26,14 +29,14 @@
     <div id="sidebar">
         <img src="assets/images/rotatingtorus.gif" height="200" width="200">
         <ul>
-            <li class="sidebar-parent" id="sidebar-fun">Fun/Experimental</li>
+            <a href="#fun"><li class="sidebar-parent" id="sidebar-fun">Fun/Experimental</li></a>
             <ul class="sidebar-child">
                 <a href="#dos-card">
                     <li>DOS Games</li>
                 </a>
             </ul>
 
-            <li class="sidebar-parent" id="sidebar-header-aboutme">About Me</li>
+            <a href="#about-me"><li class="sidebar-parent" id="sidebar-header-aboutme">About Me</li></a>
             <ul>
                 <a href="#whoami">
                     <li>$ whoami</li>
@@ -46,7 +49,7 @@
                 </a>
             </ul>
 
-            <li class="sidebar-parent" id="sidebar-header-projects">Projects</li>
+            <a href="#projects"><li class="sidebar-parent" id="sidebar-header-projects">Projects</li></a>
             <ul class="sidebar-sub-projects">
                 <a href="#project-1">
                     <li id="#sidebar-project-1">ServiceNowXMLDecoder</li>
@@ -59,7 +62,7 @@
                 </a>
             </ul>
 
-            <li class="sidebar-parent">Socials & Links</li>
+            <a href="#socials"><li class="sidebar-parent">Socials & Links</li></a>
             <ul class="sidebar-child">
                 <a href="https://github.com/Eanth">
                     <li>Github</li>
@@ -72,9 +75,12 @@
                 </a>
             </ul>
 
-
-
-            <li class="sidebar-parent" id="sidebar-contactMe">Contact Me</li>
+            <a href="#contact-me"><li class="sidebar-parent" id="sidebar-contactMe">Contact Me</li></a>
+            <ul class="sidebar-child">
+                <a href="#email-me">
+                    <li>Email</li>
+                </a>
+            </ul>
         </ul>
     </div>
 
@@ -144,8 +150,8 @@
                     <a href="https://www.linkedin.com/in/anthelia/"><em>LinkedIn</em></a>,
                     <a href="https://github.com/Eanth"><em>Github</em></a>, and
                     <a href="https://leetcode.com/u/AnnieWannie/"><em>LeetCode</em></a>
-                    along with a copy of my <a href="#resume"><em>resume</em></a>
-                    if any potential employers stop by and like what they see. <br /> <br />
+                    along with a copy of my <a href="#resume"><em>resume</em></a> for viewing.
+                    <br /> <br />
 
                     I have built this site from the ground up so my apologies if there is any roughness around
                     it's edges but it is a passion project and will constantly be improved.
@@ -239,7 +245,7 @@
                         <br />
                         <a href="https://better-eats-js.vercel.app/">view the project directly</a>
                     </p>
-                    <img src="assets/images/project3image1.png" height="570" width="670" />        
+                    <img src="assets/images/project3image1.png" height="421" width="760" />        
                 </div>
             </div>
         </div>
@@ -252,8 +258,35 @@
 
             </div>
         </div>
+        
+        <!-- Contact me -->
+        <div class="section" id="contact-me">
+            <div class="section-card" id="email-me">
+                <h2 class="section-header"><u>Contact Me</u><br />&emsp;&emsp; Email</h2>
+                <h1>Email Form</h1>
+                <h3>If social media isn't your thing you can still easily get in touch with me by using the form below.</h3>
+                <div class="email-container">
+                    <form action="action_page.php">
+                      <label for="form-name">Name</label>
+                      <input class ="input-text" type="text" id="form-name" name="form-name" placeholder="Name">
 
+                      <label for="form-email">Email</label>
+                      <input class ="input-text" type="text" id="form-email" name="form-email" placeholder="Email">
+                  
+                      <label for="subject">Subject</label>
+                      <textarea class ="input-text" id="subject" name="subject" placeholder="Write your message content here." style="height:200px"></textarea>
+                  
+                      <input id="email-submit" type="submit" value="Submit">
+                  
+                    </form>
+                  </div>
+            </div>
+        </div>
 
+        <!-- Footer -->
+         <div id="footer">
+            <h2>JS will fill this</h2>
+         </div>
     </div>
 
     <!-- darkmode -->
