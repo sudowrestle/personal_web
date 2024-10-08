@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    let currDateNow = new Date().getFullYear();
+    let currYearNow = new Date().getFullYear();
 
     const whoamiDivElements = document.querySelectorAll('.whoami-fade');
     let current = 0;
@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gameBoot("WARCRAFT");
 
-    document.querySelector("#footer h2").innerHTML="&#169 Anthony Elia " + currDateNow;
+    // fills footer text
+    document.querySelector("#footer h3").innerHTML="&#169 Anthony Elia " + currYearNow;
 
 });
 
