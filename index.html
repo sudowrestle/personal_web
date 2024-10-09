@@ -270,15 +270,15 @@
                 <h1>Email Form</h1>
                 <h3>If social media isn't your thing you can still easily get in touch with me by using the form below.</h3>
                 <div class="email-container">
-                    <form action="action_page.php">
+                    <form action="">
                       <label for="form-name">Name</label>
-                      <input class ="input-text" type="text" id="form-name" name="form-name" placeholder="Name">
+                      <input class ="input-text" type="text" id="form-name" name="form-name" placeholder="Name" required>
 
                       <label for="form-email">Email</label>
-                      <input class ="input-text" type="text" id="form-email" name="form-email" placeholder="Email">
+                      <input class ="input-text" type="text" id="form-email" name="form-email" placeholder="Email" required>
                   
                       <label for="subject">Subject</label>
-                      <textarea class ="input-text" id="subject" name="subject" placeholder="Write your message content here." style="height:200px"></textarea>
+                      <textarea class ="input-text" id="subject" name="subject" placeholder="Write your message content here." style="height:200px" required></textarea>
                   
                       <input id="email-submit" type="submit" value="Submit">
                   
@@ -291,7 +291,7 @@
     <!-- darkmode -->
     <div id="dark-mode-button-container">
         <button id="dark-mode-button" onclick="darkModeFunc()">Dark Mode Toggle</button>
-        <button id="pc-onoff-button" onclick="turnOffPC()">Turn off PC</button>
+        <!-- <button id="pc-onoff-button" onclick="turnOffPC()">Turn off PC</button> -->
     </div>
 
 </body>

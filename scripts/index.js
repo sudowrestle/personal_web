@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    let currYearNow = new Date().getFullYear();
-
-    const whoamiDivElements = document.querySelectorAll('.whoami-fade');
-    let current = 0;
-
+    let currYearNow = new Date().getFullYear();  
+    
+    let initialBoot = true;
 
     // adjust whoami display effects here
+    const whoamiDivElements = document.querySelectorAll('.whoami-fade');
+    let current = 0;
     function rotateWhoami() {
         whoamiDivElements.forEach((div, index) => {
             if (index === current) {
@@ -21,7 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(rotateWhoami, 4 * 1000);
     rotateWhoami();
 
-    gameBoot("WARCRAFT");
+
+    // when pc is not in view shut it off, frees up browser resources and prevents users from wondering where noises are coming from
+    const dosView = document.getElementById("dos")
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                // document.getElementById("pc-onoff-button").innerText = "Turn on PC";
+                Dos(document.getElementById("dos")).stop();
+            } else {
+                // document.getElementById("pc-onoff-button").innerText = "Turn off PC";
+                dosView.style.display = "block";
+                if (initialBoot){
+                    gameBoot("WARCRAFT")
+                    initialBoot = false;
+                } else{
+                gameBoot("DOOM");  
+                }
+            }
+        });
+    });
+
+    observer.observe(dosView);
+    
 
     // fills footer text
     document.querySelector("#footer h3").innerHTML="&#169 Anthony Elia " + currYearNow;
@@ -46,7 +68,6 @@ function gameBoot(name){
 function turnOffPC(){
     let dosPCState = document.getElementById("pc-onoff-button");
     let dosPC = document.getElementById("dos");
-    
     if (dosPCState.innerText == "Turn off PC") {
         dosPCState.innerText = "Turn on PC";
         Dos(document.getElementById("dos")).stop();
@@ -55,5 +76,4 @@ function turnOffPC(){
         dosPC.style.display = "block";
         gameBoot("DOOM");  
     }
-    
 }
