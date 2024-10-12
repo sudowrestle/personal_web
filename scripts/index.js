@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         current = (current + 1) % whoamiDivElements.length;
     }
-    setInterval(rotateWhoami, 4 * 1000);
+    setInterval(rotateWhoami, 3 * 1000);
     rotateWhoami();
 
 
@@ -47,15 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // fills footer text
     document.querySelector("#footer h3").innerHTML="&#169 Anthony Elia " + currYearNow;
+    document.querySelector("#alt-footer h1").innerHTML="&#169 Anthony Elia " + currYearNow;
 
 });
 
 function darkModeFunc(){
     var element = document.body;
+    var buttonElement = document.getElementById("dark-mode-button")
     if (element.className == "dark-mode") {
         element.className = "light-mode";
+        buttonElement.innerText = "Dark mode"
+
     } else {
         element.className = "dark-mode";
+        buttonElement.innerText = "Light mode"
     }
 }
 

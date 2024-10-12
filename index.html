@@ -100,7 +100,6 @@
                 </div>
 
 
-
                 <div id="available-games-container">
                     <button onclick="gameBoot('DOOM')">DOOM</button>
                     <button onclick="gameBoot('DUKE3D')">Duke Nukem 3D</button>
@@ -111,8 +110,9 @@
                     
 
                 </div>
+                <h1 id="secret-header">Scroll Down when done Gaming :)</h1>
             </div>
-
+            
         </div>
         
         <!-- about -->
@@ -276,7 +276,7 @@
                       <input class ="input-text" type="text" id="form-email" name="form-email" placeholder="Email" required>
                   
                       <label for="form-content">Subject</label>
-                      <textarea class ="input-text" id="form-content" name="form-content" placeholder="Write your message content here." style="height:200px" required></textarea>
+                      <textarea class ="input-text" id="form-content" name="form-content" placeholder="Write your message content here." required></textarea>
                   
                       <input id="email-submit" type="submit" value="Submit">
                   
@@ -284,11 +284,15 @@
                   </div>
             </div>
         </div>
+
+        <div id="alt-footer">
+            <h1>JS will fill this</h1>
+        </div>
     </div>
 
     <!-- darkmode -->
     <div id="dark-mode-button-container">
-        <button id="dark-mode-button" onclick="darkModeFunc()">Dark Mode Toggle</button>
+        <button id="dark-mode-button" onclick="darkModeFunc()">Light Mode</button>
         <button id="pc-onoff-button" onclick="turnOffPC()">Turn off PC</button>
     </div>
 

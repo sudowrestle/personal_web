@@ -102,7 +102,7 @@ div {
 #dark-mode-button-container {
     position: fixed;
     top: 1%;
-    left: 91%;
+    left: 85%;
     bottom: 97%;
     justify-content: center;
 }
@@ -217,7 +217,7 @@ div {
 #resume-container {
     display: flex;
     flex-direction: row;
-    padding: 10%;
+    padding: 5%;
     align-items: center;
 }
 
@@ -226,8 +226,7 @@ div {
     display: inline-block;
     height:auto;
     width:100%;
-    max-height: 750px;
-    max-width: 550px;
+    flex: 1;
 }
 
 #resume p {
@@ -254,6 +253,7 @@ div {
     background-image: url(../backgrounds/dosBackgroundFrame.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    min-height: 100vh;
 }
 
 #available-games-container{
@@ -387,6 +387,11 @@ div {
 
 /* contact styling */
 
+#email-me {
+    height:fit-content;
+    padding-bottom: 4%;
+}
+
 .email-container {
     color:#ffffff;
     position: relative;
@@ -394,10 +399,12 @@ div {
     background-color: #a8a8a8;
     padding: 20px;
     width: 45%;
-    height: 37.5%;
+    height: fit-content;
     left: 25.5%;
     top: 7%;
     text-align: left;
+    min-height: 300px;
+    margin-top: 4%;
   }
 
 .input-text, textarea {
@@ -429,6 +436,10 @@ div {
   #email-me h1, #email-me h3 {
     padding-top: 3%;
   }
+
+  #form-content {
+    height: 275px;
+}
   
 
 /* footer */
@@ -441,6 +452,24 @@ div {
     position: absolute;
     width: 100%;
     top: 97%;
+}
+
+#alt-footer {
+    background-color: inherit;
+    border-top: solid 3px #a93939;
+    height: 2vh;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    top: 97%;
+    display:none;
+    padding-top: .5%;
+}
+
+#secret-header {
+    position: absolute;
+    bottom: 1%;
+    display: none;
 }
 
 /* rules - media */
@@ -489,6 +518,10 @@ div {
     #section-card {
         height:100vh;
     }
+
+    #form-content {
+        height: 100px;
+    }
 }
 
 @media only screen and (max-width: 670px), (max-height:825px) {
@@ -523,4 +556,49 @@ div {
         height:auto;
         width:auto;
     }
+
+    #form-content {
+        height: 100px;
+    }
+
+    #alt-footer {
+        display:block;
+    }
+
+    #secret-header {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 670px){
+    .project-card {
+        flex-direction: column;
+    }
+
+    #content img {
+        max-height: 35vh;
+        max-width: 35vh;
+    }
+
+    .section-card {
+        height: fit-content;
+    }
+
+    #resume-container {
+        flex-direction: column;
+    }
+
+    #resume-container p {
+        width: 100%;
+        font-size: 1.45rem;
+    }
+
+    #whatisthis p {
+        font-size: 1.45rem;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-top: 10.5%;
+        padding-bottom: 10.5%;
+    }
+
 }
