@@ -12,10 +12,6 @@ p {
     font-size: 1.45rem;
 }
 
-div {
-    min-height: fit-content;
-}
-
 /* classes */
 .light-mode {
     background-color: #eeeeee;
@@ -85,7 +81,7 @@ div {
 
 /* misc. ids */
 
-#content{
+.content{
     position: relative;
     left: 12.5%;
     width: 87.5%;
@@ -94,9 +90,9 @@ div {
     flex-direction: column;
 }
 
-#content img {
+.content img {
     max-width: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
 }
 
 #dark-mode-button-container {
@@ -225,11 +221,12 @@ div {
     position: relative;
     display: inline-block;
     height:auto;
-    width:100%;
+    width:25%;
+    height: 25%;
     flex: 1;
 }
 
-#resume p {
+#resume-container p {
     position:relative;
     display: inline-block;
     width: 25%;
@@ -239,7 +236,7 @@ div {
     flex: 1;
 }
 
-#resume a {
+#resume-container a {
     color: inherit;
     position: relative;
     bottom: 15%;
@@ -368,7 +365,7 @@ div {
 .project-card img {
     padding: 3%;
     max-width: 35vh;
-    max-height: 35vh;
+    /* max-height: 35vh; */
 }
 
 .project-card p {
@@ -383,6 +380,46 @@ div {
 .project-card a:hover {
     display: inline-block;
     transform: scale(1.1);
+}
+
+/* Socials */
+
+.socials-box {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 5%;
+}
+
+.socials-box:hover {
+    transform: scale(1.1);
+}
+
+.socials-box a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2em;
+    max-width: 270px;
+    align-self: center;
+}
+
+.socials-box img {
+    border-radius: 20%;
+}
+
+
+#socials-grid {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 10%;
+    align-self: center;
+    flex-wrap: wrap;
+    top: 5%;
+}
+
+#socials-title {
+    align-self: center;
 }
 
 /* contact styling */
@@ -449,9 +486,10 @@ div {
     border-top: solid 3px #a93939;
     height: fit-content;
     text-align: center;
-    position: absolute;
+    position: sticky;
     width: 100%;
     top: 97%;
+    min-height: 5px;
 }
 
 #alt-footer {
@@ -474,15 +512,14 @@ div {
 
 /* rules - media */
 
-@media only screen and (max-width: 1600px),(max-height:1200px)  {
+@media only screen and (max-width: 1600px),(max-height:1000px)  {
 
     html {
         font-size: 0.75rem;
     }
 
-    #content img {
+    .content img {
         max-width: 55vh;
-        max-height: 55vh;
     }
     
     #whatisthis {
@@ -499,7 +536,12 @@ div {
         padding: 2%;
     }
 
-    #content {
+    #resume-container img {
+        height: 70%;
+        width: 50%;
+    }
+
+    .content {
         left: 0%;
         width: 87.5%;
         height: 100%;
@@ -510,7 +552,7 @@ div {
         font-size: 1.5em;
     }
 
-    #resume-container{
+    #resume-container {
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -522,22 +564,29 @@ div {
     #form-content {
         height: 100px;
     }
+
+    #alt-footer {
+        display:block;
+    }
+
+    .project-card {
+        padding-top: 10%;
+    }
 }
 
-@media only screen and (max-width: 670px), (max-height:825px) {
+@media only screen and (max-width: 1000px) {
 
     #sidebar {
         display:none;
     }
 
-    #content {
+    .content {
         width: 100%;
         margin-left:0%;
     }
 
-    #content img {
-        max-width: 55vh;
-        max-height: 55vh;
+    .content img {
+        max-width: 45vh;
     }
     
     .section-header {
@@ -548,6 +597,7 @@ div {
         padding-left: 0%;
         padding-top: 10%;
         padding-bottom: 10%;
+        flex-direction: column;
     }
 
     .project-card img{
@@ -555,6 +605,10 @@ div {
         max-width: 300px;
         height:auto;
         width:auto;
+    }
+
+    .section-card {
+        height: fit-content;
     }
 
     #form-content {
@@ -567,21 +621,7 @@ div {
 
     #secret-header {
         display: block;
-    }
-}
-
-@media only screen and (max-width: 670px){
-    .project-card {
-        flex-direction: column;
-    }
-
-    #content img {
-        max-height: 35vh;
-        max-width: 35vh;
-    }
-
-    .section-card {
-        height: fit-content;
+        color: #fff;
     }
 
     #resume-container {
@@ -600,5 +640,4 @@ div {
         padding-top: 10.5%;
         padding-bottom: 10.5%;
     }
-
 }

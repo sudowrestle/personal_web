@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById("pc-onoff-button").innerText = "Turn off PC";
                 dosView.style.display = "block";
                 if (initialBoot){
-                    gameBoot("WARCRAFT")
+                    gameBoot("DOOM")
                     initialBoot = false;
                 } else{
                 gameBoot("DOOM");  
