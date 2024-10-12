@@ -12,6 +12,10 @@ p {
     font-size: 1.45rem;
 }
 
+div {
+    min-height: fit-content;
+}
+
 /* classes */
 .light-mode {
     background-color: #eeeeee;
@@ -32,6 +36,7 @@ p {
     flex-direction: row;
     padding-top: 12.5%;
     padding-left: 2.5%;
+    padding-right: 2.5%;
     align-items: center;
 }
 
@@ -55,6 +60,7 @@ p {
 .section-card {
     height: 100vh;
     box-shadow: 0px 0px 6px 0px #a93939;
+    min-height: fit-content;
 }
 
 .whoami-fade {
@@ -88,8 +94,14 @@ p {
     flex-direction: column;
 }
 
+#content img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #dark-mode-button-container {
     position: fixed;
+    top: 1%;
     left: 91%;
     bottom: 97%;
     justify-content: center;
@@ -108,6 +120,7 @@ p {
 /* sidebar styling */
 
 #sidebar {
+    background-color: inherit;
     position: fixed;
     height: 100vh;
     width: 12.5%;
@@ -115,6 +128,7 @@ p {
     box-shadow: 0px 0px 20px 7px #9b5098;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 10000;
 }
 
 #sidebar a {
@@ -129,6 +143,8 @@ p {
 #sidebar img {
     padding-top: 10%;
     padding-left: 10%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #sidebar ul {
@@ -159,11 +175,15 @@ p {
     align-content: center;
     display: grid;
     grid-template-columns: 1fr;
+    height: fit-content;
+    min-height: 100vh;
 }
 
 #whoami img {
     border-radius: 50%;
     border: solid #9e5d90 7px;
+    max-width: 35vh;
+    max-height: 35vh;
 }
 
 #whoami-header {
@@ -174,14 +194,11 @@ p {
 /* what is this section styles */
 
 #whatisthis p {
+    position: relative;
+    top: 25%;
     margin-left: 25%;
     margin-right: 25%;
     text-align: center;
-}
-
-#whatisthis p {
-    position: relative;
-    top: 25%;
 }
 
 #whatisthis a {
@@ -200,8 +217,7 @@ p {
 #resume-container {
     display: flex;
     flex-direction: row;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    padding: 10%;
     align-items: center;
 }
 
@@ -351,7 +367,8 @@ p {
 
 .project-card img {
     padding: 3%;
-    size: 75%;
+    max-width: 35vh;
+    max-height: 35vh;
 }
 
 .project-card p {
@@ -371,15 +388,16 @@ p {
 /* contact styling */
 
 .email-container {
-    color:#111;
+    color:#ffffff;
     position: relative;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #a8a8a8;
     padding: 20px;
     width: 45%;
     height: 37.5%;
     left: 25.5%;
     top: 7%;
+    text-align: left;
   }
 
 .input-text, textarea {
@@ -416,49 +434,93 @@ p {
 /* footer */
 
 #footer {
+    background-color: inherit;
     border-top: solid 3px #a93939;
-    height: 35px;
+    height: fit-content;
     text-align: center;
-    position: relative;
+    position: absolute;
     width: 100%;
-    top: 14%;
+    top: 97%;
 }
 
 /* rules - media */
 
-@media only screen and (max-width: 1026px) {
+@media only screen and (max-width: 1600px),(max-height:1200px)  {
 
     html {
         font-size: 0.75rem;
     }
 
+    #content img {
+        max-width: 55vh;
+        max-height: 55vh;
+    }
+    
     #whatisthis {
         height:fit-content;
     }
 
+    #whatisthis p{
+        top: 1%;
+        padding: 2.5%;
+    }
+
     #resume {
         height: fit-content;
-    }
-
-    #resume img{
-        display: block;
-        height: 45%;
-        width: 25%;
-        margin: auto;
-        
-    }
-
-    #sidebar {
-        display: none;
+        padding: 2%;
     }
 
     #content {
         left: 0%;
-        width: 100%;
+        width: 87.5%;
         height: 100%;
+        margin-left: 12.5%;
     }
 
     .section-header{
-        display: none;
+        font-size: 1.5em;
+    }
+
+    #resume-container{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #section-card {
+        height:100vh;
+    }
+}
+
+@media only screen and (max-width: 670px), (max-height:825px) {
+
+    #sidebar {
+        display:none;
+    }
+
+    #content {
+        width: 100%;
+        margin-left:0%;
+    }
+
+    #content img {
+        max-width: 55vh;
+        max-height: 55vh;
+    }
+    
+    .section-header {
+        margin-left: 0%;
+    }
+
+    .project-card {
+        padding-left: 0%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .project-card img{
+        max-height: 300px;
+        max-width: 300px;
+        height:auto;
+        width:auto;
     }
 }
