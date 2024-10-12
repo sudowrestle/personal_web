@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
-                document.getElementById("pc-onoff-button").innerText = "Turn on PC";
+                // document.getElementById("pc-onoff-button").innerText = "Turn on PC";
                 Dos(document.getElementById("dos")).stop();
             } else {
-                document.getElementById("pc-onoff-button").innerText = "Turn off PC";
+                // document.getElementById("pc-onoff-button").innerText = "Turn off PC";
                 dosView.style.display = "block";
                 if (initialBoot){
                     gameBoot("DOOM")
