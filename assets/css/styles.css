@@ -516,10 +516,53 @@ p {
         font-size: 0.75rem;
     }
 
+    .content {
+        left: 0%;
+        width: 87.5%;
+        height: 100%;
+        margin-left: 12.5%;
+    }
+
     .content img {
         max-width: 55vh;
     }
+
+    .section-header{
+        font-size: 1.5em;
+    }
+
+    .project-card {
+        padding-top: 10%;
+    }
     
+    #alt-footer {
+        display:block;
+    }
+
+    #form-content {
+        height: 100px;
+    }
+
+
+    #resume {
+        height: fit-content;
+        padding: 2%;
+    }
+
+    #resume-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #resume-container img {
+        height: 70%;
+        width: 50%;
+    }
+
+    #section-card {
+        height:100vh;
+    }
+
     #whatisthis {
         height:fit-content;
     }
@@ -528,55 +571,9 @@ p {
         top: 1%;
         padding: 2.5%;
     }
-
-    #resume {
-        height: fit-content;
-        padding: 2%;
-    }
-
-    #resume-container img {
-        height: 70%;
-        width: 50%;
-    }
-
-    .content {
-        left: 0%;
-        width: 87.5%;
-        height: 100%;
-        margin-left: 12.5%;
-    }
-
-    .section-header{
-        font-size: 1.5em;
-    }
-
-    #resume-container {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    #section-card {
-        height:100vh;
-    }
-
-    #form-content {
-        height: 100px;
-    }
-
-    #alt-footer {
-        display:block;
-    }
-
-    .project-card {
-        padding-top: 10%;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
-
-    #sidebar {
-        display:none;
-    }
 
     .content {
         width: 100%;
@@ -587,6 +584,10 @@ p {
         max-width: 45vh;
     }
     
+    .section-card {
+        height: fit-content;
+    }
+
     .section-header {
         margin-left: 0%;
     }
@@ -605,21 +606,21 @@ p {
         width:auto;
     }
 
-    .section-card {
-        height: fit-content;
+    #alt-footer {
+        display:block;
     }
 
     #form-content {
         height: 100px;
     }
 
-    #alt-footer {
-        display:block;
-    }
-
     #secret-header {
         display: block;
         color: #fff;
+    }
+
+    #sidebar {
+        display:none;
     }
 
     #resume-container {
@@ -637,5 +638,15 @@ p {
         margin-right: 0%;
         padding-top: 10.5%;
         padding-bottom: 10.5%;
+    }
+}
+
+@media only screen and (orientation: portrait){
+    .project-card {
+        flex-wrap: wrap;
+    }
+
+    .section-card {
+        height: fit-content;
     }
 }
