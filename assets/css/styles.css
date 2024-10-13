@@ -369,6 +369,7 @@ p {
 .project-card p {
     padding: 3%;
     align-self: center;
+    flex: 1;
 }
 
 .project-card a {
@@ -644,6 +645,7 @@ p {
 @media only screen and (orientation: portrait){
     .project-card {
         flex-wrap: wrap;
+        padding: 1%;
     }
 
     .section-card {
