@@ -220,9 +220,7 @@ p {
 #resume img {
     position: relative;
     display: inline-block;
-    height:auto;
     width:25%;
-    height: 25%;
     flex: 1;
 }
 
